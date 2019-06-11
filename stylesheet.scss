@@ -1,23 +1,23 @@
 $body_bgc: #dbb0a8;
 $navbar_bgc: #93556e;
 
-%big_c {
-  text-align: center;
-  font-size: 50px;
-}
-
 body {
   background: url('cherryb.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: sans-serif;
+
+  p{
+    font-size: 14pt;
+  }
 
 }
 
 
 #table1 {
-        font-size: 18px;
+        font-size: 16px;
 
         table {
           border: 2px solid black;
@@ -28,7 +28,8 @@ body {
         th, td {
           border: 1px solid black;
           padding: 5px;
-            text-align: center;
+          text-align: center;
+          background-color: $body_bgc
           }
 
           th {
@@ -37,12 +38,30 @@ body {
           }
 }
 
+%big_c {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+%center_b {
+  text-align: center;
+  font-weight: bold;
+}
+
+.c_b {
+  @extend %center_b;
+}
 .navbar {
   background-color: $navbar_bgc;
 }
 
 .big2 {
   @extend %big_c;
+}
+
+.p_bg {
+  background-color: $body_bgc
 }
 
 .bold {
@@ -71,6 +90,7 @@ body {
     h1::before {
         content: "Hello and Welcome.";
         font-size: 50px;
+        font-weight: bolder;
   }
 }
 
@@ -78,6 +98,7 @@ body {
     h1::before {
         content: "Hello!";
         font-size: 45px;
+        font-weight: bolder;
   }
 }
 
@@ -85,5 +106,6 @@ body {
     h1::before {
         content: "Hello!";
         font-size: 45px;
+        font-weight: bolder;
   }
 }
